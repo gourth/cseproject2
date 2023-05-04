@@ -19,10 +19,24 @@ content-type: application/json
 }
 ###
 GET http://localhost:2000/trainers
+###
+POST http://localhost:2000/trainers HTTP/1.1
+content-type: application/json
 
-### Render
+{
+    "trainer": {
+        "firstName": "Brock",
+        "lastName": "Rock",
+        "badges": "3",
+        "birthday": "03/14/87"
+    }
+}
+###
+GET http://localhost:2000/trainers
+
+### Render Pokemon
 GET https://cse341-project2-xjcc.onrender.com/pokemon
-
+### Post pokemon
 POST https://cse341-project2-xjcc.onrender.com/pokemon HTTP/1.1
 Content-Type: application/json
 
@@ -39,4 +53,19 @@ Content-Type: application/json
             "tackle"
 
         ]
+}
+
+### Render Trainers
+GET https://cse341-project2-xjcc.onrender.com/trainers
+### Post trainers
+POST https://cse341-project2-xjcc.onrender.com/trainers HTTP/1.1
+Content-Type: application/json
+
+{
+    "trainer": {
+        "firstName": "Brock",
+        "lastName": "Rock",
+        "badges": "3",
+        "birthday": "03/14/87"
+    }
 }

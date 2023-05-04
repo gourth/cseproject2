@@ -24,6 +24,7 @@ const createPokemon = async (req, res) => {
     type: req.body.type,
     generation: req.body.generation,
     region: req.body.region,
+    finalEvolution: req.body.finalEvolution,
     item: req.body.item,
     moves: req.body.moves
   };
@@ -42,6 +43,7 @@ const updatePokemon = async (req, res) => {
     type: req.body.type,
     generation: req.body.generation,
     region: req.body.region,
+    finalEvolution: req.body.finalEvolution,
     item: req.body.item,
     moves: req.body.moves
   };

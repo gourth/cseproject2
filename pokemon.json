@@ -1,0 +1,16 @@
+{
+    "pokemon": {
+        "name": "bulbasaur",
+        "type": "grass",
+        "generation": "1",
+        "region": "kanto",
+        "finalEvolution": "venasuar",
+        "item": "miracle seed",
+        "moves": [
+            "vine whip",
+            "solar beam",
+            "razor leaf"
+
+        ]
+    }
+}

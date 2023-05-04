@@ -1,0 +1,19 @@
+GET http://localhost:2000/pokemon
+###
+POST http://localhost:2000/pokemon HTTP/1.1
+content-type: application/json
+
+{
+   "name": "squirtle",
+        "type": "water",
+        "generation": "1",
+        "region": "kanto",
+        "finalEvolution": "blastoise",
+        "item": "shiny stone",
+        "moves": [
+            "water gun",
+            "headbutt",
+            "bubble"
+
+        ]
+}

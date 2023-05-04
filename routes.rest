@@ -17,3 +17,26 @@ content-type: application/json
 
         ]
 }
+###
+GET http://localhost:2000/trainers
+
+### Render
+GET https://cse341-project2-xjcc.onrender.com/pokemon
+
+POST https://cse341-project2-xjcc.onrender.com/pokemon HTTP/1.1
+Content-Type: application/json
+
+{
+   "name": "charmander",
+        "type": "fire",
+        "generation": "1",
+        "region": "kanto",
+        "finalEvolution": "charizard",
+        "item": "charcoal",
+        "moves": [
+            "ember",
+            "bite",
+            "tackle"
+
+        ]
+}

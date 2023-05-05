@@ -19,9 +19,11 @@ const getSingle = async (req, res) => {
 };
 
 const createTrainers = async (req, res) => {
+  try {
   const trainers = {
     firstName: req.body.firstName,
     lastName: req.body.lastName,
+    trainerId: req.body.trainerId,
     badges: req.body.badges,
     birthday: req.body.birthday,
     
@@ -32,13 +34,18 @@ const createTrainers = async (req, res) => {
   } else {
     res.status(500).json(response.error || 'Some error occurred while creating the trainers.');
   }
+  } catch (err) {
+    res.status(500).json(err);
+  }
 };
 
 const updateTrainers = async (req, res) => {
+  try {
   const userId = new ObjectId(req.params.id);
   const trainers = {
     firstName: req.body.firstName,
     lastName: req.body.lastName,
+    trainerId: req.body.trainerId,
     badges: req.body.badges,
     birthday: req.body.birthday,
   };
@@ -53,9 +60,13 @@ const updateTrainers = async (req, res) => {
   } else {
     res.status(500).json(response.error || 'Some error occurred while updating the trainers.');
   }
+  } catch (err) {
+    res.status(500).json(err);
+  }
 };
 
 const deleteTrainers = async (req, res) => {
+  try {
   const userId = new ObjectId(req.params.id);
   const response = await mongodb.getDb().db('pokedex').collection('trainers').deleteOne({ _id: userId }, true);
   console.log(response);
@@ -63,6 +74,9 @@ const deleteTrainers = async (req, res) => {
     res.status(204).send();
   } else {
     res.status(500).json(response.error || 'Some error occurred while deleting the trainers.');
+  }
+  } catch (err) {
+    res.status(500).json(err);
   }
 };
 

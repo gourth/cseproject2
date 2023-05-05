@@ -19,6 +19,7 @@ const getSingle = async (req, res) => {
 };
 
 const createPokemon = async (req, res) => {
+  try {
   const pokemon = {
     name: req.body.name,
     type: req.body.type,
@@ -34,9 +35,14 @@ const createPokemon = async (req, res) => {
   } else {
     res.status(500).json(response.error || 'Some error occurred while creating the pokemon.');
   }
+  } catch (err) {
+    res.status(500).json(err);
+  }
 };
 
+
 const updatePokemon = async (req, res) => {
+  try {
   const userId = new ObjectId(req.params.id);
   const pokemon = {
     name: req.body.name,
@@ -58,9 +64,13 @@ const updatePokemon = async (req, res) => {
   } else {
     res.status(500).json(response.error || 'Some error occurred while updating the pokemon.');
   }
+  } catch (err) {
+    res.status(500).json(err);
+  }
 };
 
 const deletePokemon = async (req, res) => {
+  try {
   const userId = new ObjectId(req.params.id);
   const response = await mongodb.getDb().db().collection('pokemon').deleteOne({ _id: userId }, true);
   console.log(response);
@@ -68,6 +78,9 @@ const deletePokemon = async (req, res) => {
     res.status(204).send();
   } else {
     res.status(500).json(response.error || 'Some error occurred while deleting the pokemon.');
+  }
+  } catch (err) {
+    res.status(500).json(err);
   }
 };
 

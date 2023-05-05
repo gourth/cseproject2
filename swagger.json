@@ -192,6 +192,9 @@
                 "lastName": {
                   "example": "any"
                 },
+                "trainerId": {
+                  "example": "any"
+                },
                 "badges": {
                   "example": "any"
                 },
@@ -251,6 +254,9 @@
                   "example": "any"
                 },
                 "lastName": {
+                  "example": "any"
+                },
+                "trainerId": {
                   "example": "any"
                 },
                 "badges": {

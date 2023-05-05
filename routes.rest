@@ -54,6 +54,22 @@ Content-Type: application/json
 
         ]
 }
+### Put Pokemon
+PUT https://cse341-project2-xjcc.onrender.com/pokemon/64545520ef38ce518f28599f HTTP/1.1
+content-type: application/json
+
+{
+   "name": "pidgey",
+        "type": "flying",
+        "generation": "1",
+        "region": "kanto",
+        "finalEvolution": "pidgeot",
+        "item": "claw",
+        "moves": "tackle"
+}
+### DELETE Pokemon
+DELETE https://cse341-project2-xjcc.onrender.com/pokemon/645341bb11805f44c658817b HTTP/1.1
+content-type: application/json
 
 ### Render Trainers
 GET https://cse341-project2-xjcc.onrender.com/trainers
@@ -69,3 +85,19 @@ Content-Type: application/json
         "birthday": "03/14/87"
     }
 }
+
+### Put Trainers
+PUT https://cse341-project2-xjcc.onrender.com/trainers/6454593013ac2da2bfd44be5 HTTP/1.1
+content-type: application/json
+
+{
+    "trainer": {
+        "firstName": "Brock",
+        "lastName": "Rock",
+        "badges": "7",
+        "birthday": "08/14/95"
+    }
+}
+### DELETE Trainers
+DELETE https://cse341-project2-xjcc.onrender.com/trainers/64545591ef38ce518f2859a0 HTTP/1.1
+content-type: application/json

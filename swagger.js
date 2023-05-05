@@ -5,7 +5,7 @@ const doc = {
     title: 'My API',
     description: 'Pokemon API'
   },
-  host: 'https://cse341-project2-xjcc.onrender.com',
+  host: 'cse341-project2-xjcc.onrender.com',
   schemes: ['https']
 };
 

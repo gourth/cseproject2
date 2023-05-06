@@ -5,7 +5,7 @@ const mongodb = require('./db/connect');
 const cors = require('cors');
 const createError = require('http-errors');
 const path = require('path');
-const { signupValidation, loginValidation } = require('./validation.js');
+
 
 const port = process.env.PORT || 2000;
 const app = express();
@@ -31,5 +31,3 @@ mongodb.initDb((err, mongodb) => {
     console.log(`Connected to DB and listening on ${port}`);
   }
 });
-
-

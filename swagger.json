@@ -220,13 +220,7 @@
                 "lastName": {
                   "example": "any"
                 },
-                "trainerId": {
-                  "example": "any"
-                },
-                "badges": {
-                  "example": "any"
-                },
-                "birthday": {
+                "password": {
                   "example": "any"
                 }
               }
@@ -292,13 +286,7 @@
                 "lastName": {
                   "example": "any"
                 },
-                "trainerId": {
-                  "example": "any"
-                },
-                "badges": {
-                  "example": "any"
-                },
-                "birthday": {
+                "password": {
                   "example": "any"
                 }
               }

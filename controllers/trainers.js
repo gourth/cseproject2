@@ -32,9 +32,7 @@ const createTrainers = async (req, res) => {
   const trainers = {
     firstName: req.body.firstName,
     lastName: req.body.lastName,
-    trainerId: req.body.trainerId,
-    badges: req.body.badges,
-    birthday: req.body.birthday,
+    password: req.body.password
     
   };
   const response = await mongodb.getDb().db('pokedex').collection('trainers').insertOne(trainers);
@@ -57,9 +55,7 @@ const updateTrainers = async (req, res) => {
   const trainers = {
     firstName: req.body.firstName,
     lastName: req.body.lastName,
-    trainerId: req.body.trainerId,
-    badges: req.body.badges,
-    birthday: req.body.birthday,
+    password: req.body.password
   };
   const response = await mongodb
     .getDb()

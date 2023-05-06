@@ -20,7 +20,11 @@
     },
     "/pokemon/": {
       "get": {
-        "description": "",
+        "tags": [
+          "Pokemon"
+        ],
+        "summary": "Gets all pokemon",
+        "description": "Select GET to retrieve full list of pokemon",
         "produces": [
           "application/json"
         ],
@@ -32,7 +36,11 @@
         }
       },
       "post": {
-        "description": "",
+        "tags": [
+          "Pokemon"
+        ],
+        "summary": "Creates a new pokemon",
+        "description": "Input info to create a new pokemon",
         "parameters": [
           {
             "name": "body",
@@ -77,7 +85,11 @@
     },
     "/pokemon/{id}": {
       "get": {
-        "description": "",
+        "tags": [
+          "Pokemon"
+        ],
+        "summary": "Gets a single pokemon",
+        "description": "Enter ID of pokemon to retrieve data",
         "produces": [
           "application/json"
         ],
@@ -96,7 +108,11 @@
         }
       },
       "put": {
-        "description": "",
+        "tags": [
+          "Pokemon"
+        ],
+        "summary": "Updates a certain pokemon",
+        "description": "Enter pokemon ID to update",
         "parameters": [
           {
             "name": "id",
@@ -145,7 +161,11 @@
         }
       },
       "delete": {
-        "description": "",
+        "tags": [
+          "Pokemon"
+        ],
+        "summary": "Deletes a pokemon",
+        "description": "Enter pokemon ID to delete",
         "parameters": [
           {
             "name": "id",
@@ -166,7 +186,11 @@
     },
     "/trainers/": {
       "get": {
-        "description": "",
+        "tags": [
+          "Trainers"
+        ],
+        "summary": "Gets all trainers",
+        "description": "Select GET to retrieve full list of trainers",
         "produces": [
           "application/json"
         ],
@@ -178,7 +202,11 @@
         }
       },
       "post": {
-        "description": "",
+        "tags": [
+          "Trainers"
+        ],
+        "summary": "Creates a new trainer",
+        "description": "Input info to create a new trainer",
         "parameters": [
           {
             "name": "body",
@@ -217,7 +245,11 @@
     },
     "/trainers/{id}": {
       "get": {
-        "description": "",
+        "tags": [
+          "Trainers"
+        ],
+        "summary": "Gets a single trainer",
+        "description": "Enter ID of trainer to retrieve data",
         "produces": [
           "application/json"
         ],
@@ -236,7 +268,11 @@
         }
       },
       "put": {
-        "description": "",
+        "tags": [
+          "Trainers"
+        ],
+        "summary": "Updates a certain trainer",
+        "description": "Enter trainer ID to update",
         "parameters": [
           {
             "name": "id",
@@ -279,7 +315,11 @@
         }
       },
       "delete": {
-        "description": "",
+        "tags": [
+          "Trainers"
+        ],
+        "summary": "Deletes a trainer",
+        "description": "Enter trainer ID to delete",
         "parameters": [
           {
             "name": "id",

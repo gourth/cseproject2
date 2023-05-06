@@ -2,6 +2,9 @@ const mongodb = require('../db/connect');
 const ObjectId = require('mongodb').ObjectId;
 
 const getAll = async (req, res) => {
+  //#swagger.tags=['Pokemon']
+  //#swagger.summary=Gets all pokemon
+  //#swagger.description=Select GET to retrieve full list of pokemon
   const result = await mongodb.getDb().db().collection('pokemon').find();
   result.toArray().then((lists) => {
     res.setHeader('Content-Type', 'application/json');
@@ -10,6 +13,9 @@ const getAll = async (req, res) => {
 };
 
 const getSingle = async (req, res) => {
+  //#swagger.tags=['Pokemon']
+  //#swagger.summary=Gets a single pokemon
+  //#swagger.description=Enter ID of pokemon to retrieve data
   const userId = new ObjectId(req.params.id);
   const result = await mongodb.getDb().db().collection('pokemon').find({ _id: userId });
   result.toArray().then((lists) => {
@@ -19,6 +25,9 @@ const getSingle = async (req, res) => {
 };
 
 const createPokemon = async (req, res) => {
+  //#swagger.tags=['Pokemon']
+  //#swagger.summary=Creates a new pokemon
+  //#swagger.description=Input info to create a new pokemon
   try {
   const pokemon = {
     name: req.body.name,
@@ -42,6 +51,9 @@ const createPokemon = async (req, res) => {
 
 
 const updatePokemon = async (req, res) => {
+  //#swagger.tags=['Pokemon']
+  //#swagger.summary=Updates a certain pokemon
+  //#swagger.description=Enter pokemon ID to update
   try {
   const userId = new ObjectId(req.params.id);
   const pokemon = {
@@ -70,6 +82,9 @@ const updatePokemon = async (req, res) => {
 };
 
 const deletePokemon = async (req, res) => {
+  //#swagger.tags=['Pokemon']
+  //#swagger.summary=Deletes a pokemon
+  //#swagger.description=Enter pokemon ID to delete
   try {
   const userId = new ObjectId(req.params.id);
   const response = await mongodb.getDb().db().collection('pokemon').deleteOne({ _id: userId }, true);

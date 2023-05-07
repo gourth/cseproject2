@@ -3,8 +3,7 @@ const bodyParser = require('body-parser');
 const MongoClient = require('mongodb').MongoClient;
 const mongodb = require('./db/connect');
 const cors = require('cors');
-const createError = require('http-errors');
-const path = require('path');
+
 
 
 const port = process.env.PORT || 2000;
@@ -18,7 +17,7 @@ app
     res.header("Access-Control-Allow-Headers", "Content-Type");
     next();
   })
-  // .use('/professional', professionalRoutes);
+  
   .use('/', require('./routes'));
 
   app.use(cors());

@@ -1,6 +1,7 @@
 const mongodb = require('../db/connect');
 const ObjectId = require('mongodb').ObjectId;
 
+
 const getAll = async (req, res) => {
   //#swagger.tags=['Trainers']
   //#swagger.summary=Gets all trainers

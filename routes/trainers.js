@@ -5,14 +5,16 @@ const trainersController = require('../controllers/trainers');
 
 const validation = require('../middleware/validate')
 
+const { isAuthenticated } = require("../middleware/authenticate");
+
 router.get('/', trainersController.getAll);
 
 router.get('/:id', trainersController.getSingle);
 
-router.post('/', validation.saveTrainer, trainersController.createTrainers);
+router.post('/', isAuthenticated, validation.saveTrainer, trainersController.createTrainers);
 
-router.put('/:id', validation.saveTrainer, trainersController.updateTrainers);
+router.put('/:id', isAuthenticated,validation.saveTrainer, trainersController.updateTrainers);
 
-router.delete('/:id', trainersController.deleteTrainers);
+router.delete('/:id', isAuthenticated, trainersController.deleteTrainers);
 
 module.exports = router;

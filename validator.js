@@ -1,5 +1,6 @@
 const { body, validationResult } = require('express-validator');
 const userValidationRules = () => {
+ console.log("Password not acceptable")
   return [
     // password must be at least 6 chars long
     body('password').isLength({ min: 6 })

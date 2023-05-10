@@ -3,6 +3,9 @@ const bodyParser = require('body-parser');
 const MongoClient = require('mongodb').MongoClient;
 const mongodb = require('./db/connect');
 const cors = require('cors');
+const passport = require('passport');
+const session = require('express-session');
+const GitHubStrategy = require('passport-github2').Strategy;
 
 
 

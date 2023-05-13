@@ -1,5 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const dotenv = require("dotenv").config();
 const MongoClient = require('mongodb').MongoClient;
 const mongodb = require('./db/connect');
 const cors = require('cors');
@@ -39,7 +40,7 @@ app
   
   .use('/', require('./routes'));
 
-  app.use(cors());
+  // app.use(cors());
 
   passport.use(new GitHubStrategy({
     clientID: process.env.GITHUB_CLIENT_ID,
@@ -62,6 +63,7 @@ passport.deserializeUser((user, done) => {
 });
 
 app.get('/', (req, res) => {res.send(req.session.user !== undefined ? `Logged in as ${req.session.user.displayName}` : "Logged Out")});
+console.log("help me")
 
 app.get('/github/callback', passport.authenticate('github', {
   failureRedirect: "/api-docs", session: false}),

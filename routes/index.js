@@ -1,6 +1,7 @@
 const express = require('express');
-const router = express.Router();
+// const router = express.Router();
 const passport = require('passport');
+const router = require("express").Router();
 
 router.use('/', require('./swagger'));
 router.use('/pokemon', require('./pokemon'));
